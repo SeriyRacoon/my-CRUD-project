@@ -1,0 +1,23 @@
+public class UserService {
+    private UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public User createUser(String name) {
+        return userRepository.createUser(name);
+    }
+
+    public User getUser(int id) {
+        return userRepository.getUser(id);
+    }
+
+    public User updateUser(int id, String name) {
+        return userRepository.updateUser(id, name);
+    }
+
+    public User deleteUser(int id) {
+        return userRepository.deleteUser(id);
+    }
+}

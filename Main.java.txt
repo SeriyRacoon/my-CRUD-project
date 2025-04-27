@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        UserService userService = new UserService(new UserRepository());
+        UserController userController = new UserController(userService);
+
+        userController.createUser("Alice");
+        userController.createUser("Bob");
+
+        userController.getUser(1);
+        userController.updateUser(1, "Alicia");
+        userController.getUser(1);
+        userController.deleteUser(2);
+    }
+}
